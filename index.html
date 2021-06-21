@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Map Box GL Flood Application Exploring</title>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+	<div id='map' style='width: 400px; height: 300px;'></div>
+	<script>
+	  mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyaXM0ODciLCJhIjoiY2tvemxwaHd6MDlibzJ4bzJpd3Bnb29zYyJ9.ILVB7QGa5sVpo4HxCecrGw';
+	  var map = new mapboxgl.Map({
+	    container: 'map',
+	    style: 'mapbox://styles/mapbox/streets-v11'
+	  });
+	</script>
+</body>
+</html>

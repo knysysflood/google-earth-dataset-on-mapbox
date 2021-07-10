@@ -7,13 +7,43 @@
 
 </head>
 <body>
-	<div id='map' style='width: 400px; height: 300px;'></div>
+	<div id='map' style='width: 100%; height: 100vh;'></div>
 	<script>
 	  mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyaXM0ODciLCJhIjoiY2tvemxwaHd6MDlibzJ4bzJpd3Bnb29zYyJ9.ILVB7QGa5sVpo4HxCecrGw';
-	  var map = new mapboxgl.Map({
-	    container: 'map',
-	    style: 'mapbox://styles/mapbox/streets-v11'
-	  });
+
+
+
+
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/light-v10',
+zoom: 14,
+center: [-78.95261, 44.57204]
+});
+ 
+map.on('load', function () {
+map.addSource('mapbox-terrain', {
+type: 'raster',
+// Use any Mapbox-hosted tileset using its tileset id.
+// Learn more about where to find a tileset id:
+// https://docs.mapbox.com/help/glossary/tileset-id/
+url: 'mapbox://haris487.2bjeiz8z'
+});
+map.addLayer({
+'id': 'terrain-data',
+'type': 'raster',
+'source': 'mapbox-terrain',
+'source-layer': 'contour',
+});
+});
+
+
+
+
+
+		// zoom: 14,
+		// center: [-78.95261, 44.57204]
+
 	</script>
 </body>
 </html>
